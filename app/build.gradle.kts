@@ -1,6 +1,8 @@
 plugins {
     id(AndroidConfig.Plugins.androidApplication)
     id(AndroidConfig.Plugins.kotlinAndroid)
+    id(AndroidConfig.Plugins.kotlinKapt)
+    id(AndroidConfig.Plugins.dagger)
 }
 
 android {
@@ -48,6 +50,28 @@ dependencies {
     implementation(Dependencies.appCompat)
     implementation(Dependencies.material)
     implementation(Dependencies.constraintLayout)
+
+    // Coroutines
+    implementation(Dependencies.coroutineCore)
+    implementation(Dependencies.coroutineAndroid)
+
+    // Network (Retrofit, moshi, interceptor)
+    implementation(Dependencies.retrofit)
+    implementation(Dependencies.moshiConverter)
+    implementation(Dependencies.loggingInterceptor)
+
+    // Timber logging
+    implementation(Dependencies.timber)
+
+    // Glide
+    implementation(Dependencies.glide)
+    kapt(Dependencies.glideKapt)
+
+    // Hilt dependencies
+    implementation(Dependencies.hiltAndroid)
+    kapt(Dependencies.hiltAndroidKapt)
+    kapt(Dependencies.hiltKapt)
+
     // Test
     testImplementation(Dependencies.jUnit)
     androidTestImplementation(Dependencies.testEtxJunit)
