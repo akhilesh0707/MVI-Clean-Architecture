@@ -59,11 +59,6 @@ dependencies {
     implementation(Dependencies.coroutineCore)
     implementation(Dependencies.coroutineAndroid)
 
-    // Network (Retrofit, moshi, interceptor)
-    implementation(Dependencies.retrofit)
-    implementation(Dependencies.moshiConverter)
-    implementation(Dependencies.loggingInterceptor)
-
     // Timber logging
     implementation(Dependencies.timber)
 

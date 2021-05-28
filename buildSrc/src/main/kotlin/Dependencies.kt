@@ -14,14 +14,7 @@ object Dependencies {
     const val coroutineAndroid =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutineAndroidVersion}"
 
-    // Network dependencies
-    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
-    const val moshiConverter =
-        "com.squareup.retrofit2:converter-moshi:${Versions.moshiConverterVersion}"
-    const val loggingInterceptor =
-        "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptorVersion}"
-
-    // Test
+    // Timber
     const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
 
     // Hilt dependencies
@@ -37,4 +30,18 @@ object Dependencies {
     const val jUnit = "junit:junit:${Versions.jUnitVersion}"
     const val testEtxJunit = "androidx.test.ext:junit:${Versions.testEtxJunitVersion}"
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCoreVersion}"
+
+    object Data{
+        // Network dependencies
+        const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
+        const val moshiConverter =
+            "com.squareup.retrofit2:converter-moshi:${Versions.moshiConverterVersion}"
+        const val loggingInterceptor =
+            "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptorVersion}"
+
+        // Timber
+        const val timber = Dependencies.timber
+    }
+
+
 }
