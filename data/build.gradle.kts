@@ -9,6 +9,7 @@ java {
 }
 
 dependencies {
-
+    // Modules
+    implementation(project(AndroidConfig.Modules.domain))
 
 }
