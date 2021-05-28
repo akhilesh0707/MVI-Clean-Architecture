@@ -45,6 +45,10 @@ android {
 }
 
 dependencies {
+    // Modules
+    implementation(project(AndroidConfig.Modules.domain))
+    implementation(project(AndroidConfig.Modules.data))
+
     implementation(Dependencies.kotlin)
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.appCompat)

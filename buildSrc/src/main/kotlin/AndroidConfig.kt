@@ -12,8 +12,15 @@ object AndroidConfig {
 
     object Plugins {
         const val androidApplication = "com.android.application"
+        const val kotlin = "kotlin"
         const val kotlinAndroid = "kotlin-android"
         const val kotlinKapt = "kotlin-kapt"
+        const val javaLibrary = "java-library"
         const val dagger = "dagger.hilt.android.plugin"
+    }
+
+    object Modules{
+        const val data = ":data"
+        const val domain = ":domain"
     }
 }
