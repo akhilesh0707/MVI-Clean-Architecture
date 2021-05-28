@@ -42,6 +42,4 @@ object Dependencies {
         // Timber
         const val timber = Dependencies.timber
     }
-
-
 }
