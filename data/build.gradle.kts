@@ -11,7 +11,8 @@ java {
 dependencies {
     // Modules
     implementation(project(AndroidConfig.Modules.domain))
-
+    // JavaX
+    implementation(Dependencies.Data.javax)
     // Network (Retrofit, moshi, interceptor)
     implementation(Dependencies.Data.retrofit)
     implementation(Dependencies.Data.moshiConverter)

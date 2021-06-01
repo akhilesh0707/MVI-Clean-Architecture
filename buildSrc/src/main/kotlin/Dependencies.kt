@@ -1,6 +1,7 @@
 object Dependencies {
     // Dependencies
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinVersion}"
+    const val javax = "javax.inject:javax.inject:${Versions.javaxInjectVersion}"
 
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtxVersion}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompatVersion}"
@@ -32,6 +33,7 @@ object Dependencies {
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCoreVersion}"
 
     object Data{
+
         // Network dependencies
         const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
         const val moshiConverter =
@@ -41,5 +43,6 @@ object Dependencies {
 
         // Timber
         const val timber = Dependencies.timber
+        const val javax = Dependencies.javax
     }
 }

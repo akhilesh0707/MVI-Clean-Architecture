@@ -1,7 +1,7 @@
 object Versions {
     const val gradleVersion = "4.2.1"
     const val kotlinVersion = "1.5.0"
-
+    const val javaxInjectVersion = "1"
     // Dependencies version
     const val coreKtxVersion = "1.5.0"
     const val appCompatVersion = "1.3.0"
