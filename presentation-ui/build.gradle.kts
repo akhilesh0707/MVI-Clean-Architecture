@@ -49,11 +49,22 @@ dependencies {
     implementation(project(AndroidConfig.Modules.domain))
     implementation(project(AndroidConfig.Modules.data))
 
+    // Core dependencies
     implementation(Dependencies.kotlin)
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.appCompat)
     implementation(Dependencies.material)
     implementation(Dependencies.constraintLayout)
+
+    implementation(Dependencies.navigationFragmentKtx)
+    implementation(Dependencies.navigationUiKtx)
+
+    // LifeCycle
+    implementation(Dependencies.viewModelKtx)
+    implementation(Dependencies.liveDataKtx)
+    implementation(Dependencies.lifeCycleExtension)
+    implementation(Dependencies.lifeCycleRuntime)
+    implementation(Dependencies.lifeCycleRuntimeKtx)
 
     // Coroutines
     implementation(Dependencies.coroutineCore)

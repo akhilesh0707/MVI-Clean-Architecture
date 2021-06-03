@@ -8,6 +8,20 @@ object Versions {
     const val materialVersion = "1.3.0"
     const val constraintLayoutVersion = "2.0.4"
 
+    // LifeCycle dependencies
+    const val viewmodelKtxVersion = "2.2.0"
+    const val lifeCycleExtVersion = "2.2.0"
+    const val liveDataKtxVersion = "2.2.0"
+    const val lifeCycleRuntimeVersion = "2.2.0"
+    const val lifeCycleRuntimeKtxVersion = "2.2.0"
+
+    // Activity KTX for viewModels() dependencies
+    const val activityKtxVersion = "1.1.0"
+
+    // Navigation component dependencies
+    const val navFragmentKtxVersion = "2.3.0"
+    const val navUiKtxVersion = "2.3.0"
+
     // Network dependencies
     const val retrofitVersion = "2.7.0"
     const val moshiConverterVersion = "2.7.0"

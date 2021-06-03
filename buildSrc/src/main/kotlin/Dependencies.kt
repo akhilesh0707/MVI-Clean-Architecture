@@ -8,6 +8,11 @@ object Dependencies {
     const val material = "com.google.android.material:material:${Versions.materialVersion}"
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
+    const val navigationFragmentKtx =
+        "androidx.navigation:navigation-fragment-ktx:${Versions.navFragmentKtxVersion}"
+    const val navigationUiKtx =
+        "androidx.navigation:navigation-ui-ktx:${Versions.navUiKtxVersion}"
+    const val activityKtx = "androidx.activity:activity-ktx:${Versions.activityKtxVersion}"
 
     // Coroutines
     const val coroutineCore =
@@ -32,7 +37,19 @@ object Dependencies {
     const val testEtxJunit = "androidx.test.ext:junit:${Versions.testEtxJunitVersion}"
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCoreVersion}"
 
-    object Data{
+    // LifeCycle
+    const val viewModelKtx =
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewmodelKtxVersion}"
+    const val liveDataKtx =
+        "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.liveDataKtxVersion}"
+    const val lifeCycleExtension =
+        "androidx.lifecycle:lifecycle-extensions:${Versions.lifeCycleExtVersion}"
+    const val lifeCycleRuntime =
+        "androidx.lifecycle:lifecycle-runtime:${Versions.lifeCycleRuntimeVersion}"
+    const val lifeCycleRuntimeKtx =
+        "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifeCycleRuntimeKtxVersion}"
+
+    object Data {
 
         // Network dependencies
         const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
