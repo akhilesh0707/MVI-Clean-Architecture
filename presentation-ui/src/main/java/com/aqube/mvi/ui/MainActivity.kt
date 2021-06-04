@@ -11,9 +11,11 @@ import com.aqube.mvi.R
 import com.aqube.mvi.databinding.ActivityMainBinding
 import com.aqube.mvi.extensions.setupWithNavController
 import com.aqube.mvi.extensions.showSnackBar
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private var _binding: ActivityMainBinding? = null
