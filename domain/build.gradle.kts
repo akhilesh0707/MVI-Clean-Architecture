@@ -10,5 +10,10 @@ java {
 
 dependencies {
 
+    implementation(Dependencies.kotlin)
+    implementation(Dependencies.coroutineCore)
+
+    // JavaX
+    implementation(Dependencies.javax)
 
 }

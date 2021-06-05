@@ -23,4 +23,8 @@ object AndroidConfig {
         const val data = ":data"
         const val domain = ":domain"
     }
+
+    object Debug{
+        const val baseUrl = ""
+    }
 }
