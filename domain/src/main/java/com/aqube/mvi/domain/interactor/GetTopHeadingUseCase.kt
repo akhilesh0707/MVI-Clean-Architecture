@@ -1,10 +1,9 @@
 package com.aqube.mvi.domain.interactor
 
 import com.aqube.mvi.domain.repository.NewsRemoteRepository
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-typealias GetTopHeadingListBaseUseCase = BaseUseCase<Unit, Flow<List<Character>>>
+typealias GetTopHeadingListBaseUseCase = BaseUseCase<Unit, Void>
 
 class GetTopHeadingListUseCase @Inject constructor(
     private val newsRemoteRepository: NewsRemoteRepository

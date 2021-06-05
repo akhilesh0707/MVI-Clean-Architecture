@@ -5,17 +5,18 @@ import com.aqube.mvi.domain.interactor.GetTopHeadingListUseCase
 import com.aqube.mvi.utils.CoroutineContextProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineExceptionHandler
+import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
 class ArticleListViewModel @Inject constructor(
     contextProvider: CoroutineContextProvider,
-    private val getTopHeadingListUseCase: GetTopHeadingListUseCase
+    private val topHeadingListUseCase: GetTopHeadingListUseCase
 ) : BaseViewModel(contextProvider) {
 
-    override val coroutineExceptionHandler: CoroutineExceptionHandler
-        get() = TODO("Not yet implemented")
-
+    override val coroutineExceptionHandler = CoroutineExceptionHandler { _, exception ->
+        Timber.d(exception)
+    }
     fun getTopHeadings() {
         launchCoroutineIO {
             loadTopHeadings()
@@ -23,9 +24,7 @@ class ArticleListViewModel @Inject constructor(
     }
 
     private suspend fun loadTopHeadings() {
-        getTopHeadingListUseCase(Unit).collect {
-            // Timber.d(it)
-        }
+        topHeadingListUseCase.invoke(Unit)
     }
 }
 

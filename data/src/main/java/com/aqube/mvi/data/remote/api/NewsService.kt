@@ -1,6 +1,5 @@
 package com.aqube.mvi.data.remote.api
 
-import com.aqube.mvi.data.model.NewsResponse
 import com.aqube.mvi.data.remote.api.Constants.GET_TOP_HEADINGS
 import com.aqube.mvi.data.remote.api.Constants.KEY_QUERY_API_KEY
 import com.aqube.mvi.data.remote.api.Constants.KEY_QUERY_COUNTRY
@@ -17,6 +16,6 @@ interface NewsService {
         @Query(KEY_QUERY_PAGE) page: Int,
         @Query(KEY_QUERY_COUNTRY) country: String,
         @Query(KEY_QUERY_API_KEY) apiKey: String
-    ): NewsResponse
+    ): Void
 
 }
