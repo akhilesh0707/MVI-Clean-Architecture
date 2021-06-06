@@ -5,6 +5,7 @@ import com.aqube.mvi.data.remote.api.Constants.KEY_QUERY_API_KEY
 import com.aqube.mvi.data.remote.api.Constants.KEY_QUERY_COUNTRY
 import com.aqube.mvi.data.remote.api.Constants.KEY_QUERY_PAGE
 import com.aqube.mvi.data.remote.api.Constants.KEY_QUERY_PAGE_SIZE
+import com.aqube.mvi.domain.model.NewsResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -16,6 +17,6 @@ interface NewsService {
         @Query(KEY_QUERY_PAGE) page: Int,
         @Query(KEY_QUERY_COUNTRY) country: String,
         @Query(KEY_QUERY_API_KEY) apiKey: String
-    ): Void
+    ): NewsResponse
 
 }

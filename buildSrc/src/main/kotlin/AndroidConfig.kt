@@ -25,6 +25,6 @@ object AndroidConfig {
     }
 
     object Debug{
-        const val baseUrl = ""
+        const val baseUrl = "https://newsapi.org/v2/"
     }
 }

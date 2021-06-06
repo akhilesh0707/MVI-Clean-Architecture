@@ -15,8 +15,9 @@ class ArticleListViewModel @Inject constructor(
 ) : BaseViewModel(contextProvider) {
 
     override val coroutineExceptionHandler = CoroutineExceptionHandler { _, exception ->
-        Timber.d(exception)
+        Timber.e(exception)
     }
+
     fun getTopHeadings() {
         launchCoroutineIO {
             loadTopHeadings()

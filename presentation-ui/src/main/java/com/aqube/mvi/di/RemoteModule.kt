@@ -1,6 +1,6 @@
 package com.aqube.mvi.di
 
-import androidx.viewbinding.BuildConfig
+import com.aqube.mvi.BuildConfig
 import com.aqube.mvi.data.remote.api.NewsService
 import com.aqube.mvi.data.remote.api.ServiceFactory
 import com.aqube.mvi.data.remote.repository.NewsRemoteRepositoryImpl
@@ -18,7 +18,7 @@ object RemoteModule {
     @Provides
     @Singleton
     fun provideNewsService(): NewsService {
-        return ServiceFactory.create(BuildConfig.DEBUG, "https://newsapi.org/v2/")
+        return ServiceFactory.create(BuildConfig.DEBUG, BuildConfig.BASE_URL)
     }
 
     @Provides
