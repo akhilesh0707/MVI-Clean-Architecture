@@ -3,16 +3,16 @@
 
     <item
         android:id="@+id/navigationGraphHome"
-        android:icon="@drawable/ic_tranding"
+        android:icon="@drawable/ic_newspaper"
         android:title="@string/menu_home" />
 
     <item
-        android:id="@+id/navigationGraphSearch"
-        android:icon="@drawable/ic_search"
+        android:id="@+id/navigationGraphCategory"
+        android:icon="@drawable/ic_category"
         android:title="@string/menu_search" />
     <item
         android:id="@+id/navigationGraphBookmark"
-        android:icon="@drawable/ic_options"
+        android:icon="@drawable/ic_bookmark"
         android:title="@string/menu_bookmark" />
 
     <item
