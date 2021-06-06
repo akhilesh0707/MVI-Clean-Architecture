@@ -9,7 +9,12 @@
         android:id="@+id/imageViewArticle"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
         android:padding="16dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="16dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/ic_bookmark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,7 +24,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:ellipsize="end"
         android:gravity="center|start"
         android:maxLines="2"
@@ -35,11 +39,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
         android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="#7E7B7B"
         app:layout_constraintStart_toEndOf="@+id/imageViewArticle"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
         tools:text="12 min ago" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewBookmark"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_bookmark"
+        android:tint="#7E7B7B"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewShare"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewShare"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_export"
+        android:tint="#7E7B7B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
     <View
         android:layout_width="match_parent"
