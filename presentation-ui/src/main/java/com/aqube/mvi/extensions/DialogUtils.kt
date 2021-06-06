@@ -21,7 +21,8 @@ fun Fragment.showLoadingDialog(
     canceledOnTouchOutside: Boolean = false
 ): AlertDialog? {
     return MaterialAlertDialogBuilder(context ?: return null).apply {
-        //setView(R.layout.layout_loading_dialog)
+        // TODO set dialog
+        // setView(R.layout.layout_loading_dialog)
     }.create().let { dialog ->
         dialog.setCancelable(cancelable)
         dialog.setCanceledOnTouchOutside(canceledOnTouchOutside)
@@ -49,7 +50,8 @@ fun AppCompatActivity.showLoadingDialog(
     canceledOnTouchOutside: Boolean = false
 ): AlertDialog? {
     return MaterialAlertDialogBuilder(this).apply {
-        //setView(R.layout.layout_loading_dialog)
+        // TODO set dialog
+        // setView(R.layout.layout_loading_dialog)
     }.create().let { dialog ->
         dialog.setCancelable(cancelable)
         dialog.setCanceledOnTouchOutside(canceledOnTouchOutside)
