@@ -28,7 +28,7 @@ class ArticleListFragment : BaseFragment<FragmentArticleListBinding, BaseViewMod
         viewModel.getTopHeadings()
         observe(viewModel.getArticles(), ::onViewStateChange)
         initRecyclerView()
-        initRecyclerView()
+
     }
 
     private fun initRecyclerView() {
@@ -37,7 +37,7 @@ class ArticleListFragment : BaseFragment<FragmentArticleListBinding, BaseViewMod
             layoutManager = LinearLayoutManager(requireContext())
         }
 
-        articleListAdapter.setItemClickListener { article ->
+        articleListAdapter.setItemClickListener {
             findNavController().navigate(
                 ArticleListFragmentDirections.actionArticleListFragmentToArticleDetailFragment(0)
             )

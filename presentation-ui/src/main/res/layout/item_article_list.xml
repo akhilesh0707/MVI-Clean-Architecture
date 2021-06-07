@@ -26,7 +26,7 @@
         android:layout_marginTop="16dp"
         android:ellipsize="end"
         android:gravity="center|start"
-        android:maxLines="2"
+        android:maxLines="3"
         android:scrollHorizontally="true"
         android:textAppearance="?attr/textAppearanceBody1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,42 +34,50 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Name ada asdkaasdasdas asdasdsa djk asdkja dkadja skdjasdkas daksdj ask" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textViewTime"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textAppearance="?attr/textAppearanceBody2"
-        android:textColor="#7E7B7B"
-        app:layout_constraintStart_toEndOf="@+id/imageViewArticle"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
-        tools:text="12 min ago" />
-
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageViewBookmark"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/ic_bookmark"
-        android:tint="#7E7B7B"
-        app:layout_constraintEnd_toStartOf="@+id/imageViewShare"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageViewShare"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/ic_export"
-        android:tint="#7E7B7B"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+        app:layout_constraintStart_toEndOf="@+id/imageViewArticle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="#7E7B7B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="12 min ago" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewBookmark"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_bookmark"
+            android:tint="#7E7B7B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewShare"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewShare"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_export"
+            android:tint="#7E7B7B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1.5dp"
         android:background="#CCCCCC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

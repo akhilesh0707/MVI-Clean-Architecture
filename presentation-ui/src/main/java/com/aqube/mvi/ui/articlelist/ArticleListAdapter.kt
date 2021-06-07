@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.aqube.mvi.base.BaseAdapter
 import com.aqube.mvi.databinding.ItemArticleListBinding
 import com.aqube.mvi.domain.model.Article
+import com.aqube.mvi.utils.DateUtil
 import com.bumptech.glide.RequestManager
 import javax.inject.Inject
 
@@ -21,7 +22,7 @@ class ArticleListAdapter @Inject constructor(
         }
 
         override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean {
-            return oldItem.hashCode() == newItem.hashCode()
+            return oldItem == newItem
         }
     }
 
@@ -44,7 +45,7 @@ class ArticleListAdapter @Inject constructor(
                         itemClick(item)
                     }
                 }
-                textViewTime.text = item.publishedAt
+                textViewTime.text = DateUtil.getTimeAgo(item.publishedAt)
             }
         }
     }
