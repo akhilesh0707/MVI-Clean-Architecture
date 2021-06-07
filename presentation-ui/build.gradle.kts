@@ -3,6 +3,7 @@ plugins {
     id(AndroidConfig.Plugins.kotlinAndroid)
     id(AndroidConfig.Plugins.kotlinKapt)
     id(AndroidConfig.Plugins.dagger)
+    id(AndroidConfig.Plugins.navigationSafArgs)
 }
 
 android {

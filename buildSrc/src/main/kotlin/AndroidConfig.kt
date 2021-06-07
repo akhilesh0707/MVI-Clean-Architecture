@@ -17,6 +17,7 @@ object AndroidConfig {
         const val kotlinKapt = "kotlin-kapt"
         const val javaLibrary = "java-library"
         const val dagger = "dagger.hilt.android.plugin"
+        const val navigationSafArgs = "androidx.navigation.safeargs.kotlin"
     }
 
     object Modules{

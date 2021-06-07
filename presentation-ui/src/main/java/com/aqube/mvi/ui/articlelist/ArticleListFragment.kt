@@ -3,6 +3,7 @@ package com.aqube.mvi.ui.articlelist
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aqube.mvi.base.BaseFragment
 import com.aqube.mvi.base.BaseViewModel
@@ -36,12 +37,10 @@ class ArticleListFragment : BaseFragment<FragmentArticleListBinding, BaseViewMod
             layoutManager = LinearLayoutManager(requireContext())
         }
 
-        articleListAdapter.setItemClickListener { character ->
-            /*findNavController().navigate(
-                CharacterListFragmentDirections.actionCharacterListFragmentToCharacterDetailFragment(
-                    character.id.toLong()
-                )
-            )*/
+        articleListAdapter.setItemClickListener { article ->
+            findNavController().navigate(
+                ArticleListFragmentDirections.actionArticleListFragmentToArticleDetailFragment(0)
+            )
         }
     }
 
