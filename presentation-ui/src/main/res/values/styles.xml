@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="TextAppearance.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
         <item name="fontFamily">@font/roboto</item>
         <item name="android:fontFamily">@font/roboto</item>
@@ -27,7 +28,7 @@
     <style name="TextAppearance.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="fontFamily">@font/roboto</item>
         <item name="android:fontFamily">@font/roboto</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="TextAppearance.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
