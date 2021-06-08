@@ -1,4 +1,4 @@
-package com.aqube.mvi.utils
+package com.aqube.mvi.common.utils
 
 import android.annotation.SuppressLint
 import android.text.format.DateUtils

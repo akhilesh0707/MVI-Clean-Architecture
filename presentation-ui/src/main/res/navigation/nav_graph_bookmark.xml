@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/articleListFragment"
-        android:name="com.aqube.mvi.ui.articlelist.ArticleListFragment"
+        android:name="com.aqube.mvi.features.articlelist.ui.ArticleListFragment"
         android:label="@string/fragment_article_list_title_label"
         tools:layout="@layout/fragment_article_list">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/articleDetailFragment"
-        android:name="com.aqube.mvi.ui.articledetail.ArticleDetailFragment"
+        android:name="com.aqube.mvi.features.articledetail.ArticleDetailFragment"
         android:label="@string/fragment_article_detail_title_label"
         tools:layout="@layout/fragment_article_detail" />
 </navigation>

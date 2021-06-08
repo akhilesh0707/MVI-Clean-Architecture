@@ -1,4 +1,4 @@
-package com.aqube.mvi.ui
+package com.aqube.mvi.features
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

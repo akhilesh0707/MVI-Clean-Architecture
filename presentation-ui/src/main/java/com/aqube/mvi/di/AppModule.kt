@@ -2,8 +2,8 @@ package com.aqube.mvi.di
 
 import android.content.Context
 import com.aqube.mvi.R
-import com.aqube.mvi.utils.CoroutineContextProvider
-import com.aqube.mvi.utils.CoroutineContextProviderImp
+import com.aqube.mvi.common.utils.CoroutineContextProvider
+import com.aqube.mvi.common.utils.CoroutineContextProviderImp
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingStart="16dp"
     android:paddingEnd="16dp"
-    tools:context=".ui.articlelist.ArticleListFragment">
+    tools:context=".features.articlelist.ui.ArticleListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewArticle"

@@ -1,14 +1,14 @@
-package com.aqube.mvi.ui.articlelist
+package com.aqube.mvi.features.articlelist.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.aqube.mvi.base.BaseAdapter
+import com.aqube.mvi.common.BaseAdapter
 import com.aqube.mvi.databinding.ItemArticleListBinding
 import com.aqube.mvi.domain.model.Article
-import com.aqube.mvi.utils.DateUtil
+import com.aqube.mvi.common.utils.DateUtil
 import com.bumptech.glide.RequestManager
 import javax.inject.Inject
 

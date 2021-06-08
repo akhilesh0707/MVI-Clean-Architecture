@@ -1,16 +1,11 @@
-package com.aqube.mvi.ui.articledetail
+package com.aqube.mvi.features.articledetail
 
-import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.viewModels
-import com.aqube.mvi.base.BaseFragment
-import com.aqube.mvi.base.BaseViewModel
-import com.aqube.mvi.databinding.FragmentArticleDetailBinding
+import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ArticleDetailFragment : BaseFragment<FragmentArticleDetailBinding, BaseViewModel>() {
-
+class ArticleDetailFragment : Fragment() {
+/*
     override fun getViewBinding(): FragmentArticleDetailBinding =
         FragmentArticleDetailBinding.inflate(layoutInflater)
 
@@ -19,5 +14,5 @@ class ArticleDetailFragment : BaseFragment<FragmentArticleDetailBinding, BaseVie
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-    }
+    }*/
 }

@@ -1,4 +1,4 @@
-package com.aqube.mvi.base
+package com.aqube.mvi.common
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer

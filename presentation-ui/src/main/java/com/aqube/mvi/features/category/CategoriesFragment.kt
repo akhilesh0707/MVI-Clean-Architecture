@@ -1,16 +1,11 @@
-package com.aqube.mvi.ui.category
+package com.aqube.mvi.features.category
 
-import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.viewModels
-import com.aqube.mvi.base.BaseFragment
-import com.aqube.mvi.base.BaseViewModel
-import com.aqube.mvi.databinding.FragmentCategoriesBinding
+import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class CategoriesFragment : BaseFragment<FragmentCategoriesBinding, BaseViewModel>() {
-
+class CategoriesFragment : Fragment() {
+/*
     override fun getViewBinding(): FragmentCategoriesBinding =
         FragmentCategoriesBinding.inflate(layoutInflater)
 
@@ -19,5 +14,5 @@ class CategoriesFragment : BaseFragment<FragmentCategoriesBinding, BaseViewModel
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-    }
+    }*/
 }

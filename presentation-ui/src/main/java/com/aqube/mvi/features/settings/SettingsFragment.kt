@@ -1,16 +1,11 @@
-package com.aqube.mvi.ui.settings
+package com.aqube.mvi.features.settings
 
-import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.viewModels
-import com.aqube.mvi.base.BaseFragment
-import com.aqube.mvi.base.BaseViewModel
-import com.aqube.mvi.databinding.FragmentSettingsBinding
+import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SettingsFragment : BaseFragment<FragmentSettingsBinding, BaseViewModel>() {
-
+class SettingsFragment : Fragment() {
+/*
     override fun getViewBinding(): FragmentSettingsBinding =
         FragmentSettingsBinding.inflate(layoutInflater)
 
@@ -19,5 +14,5 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding, BaseViewModel>() 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-    }
+    }*/
 }

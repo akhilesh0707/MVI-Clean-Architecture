@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:name=".MVIApplication"
         android:theme="@style/Theme.MVIArchitecture">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".features.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
