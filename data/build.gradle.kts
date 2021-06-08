@@ -11,6 +11,10 @@ java {
 dependencies {
     // Modules
     implementation(project(AndroidConfig.Modules.domain))
+
+    // Kotlin coroutines
+    implementation(Dependencies.kotlin)
+    implementation(Dependencies.coroutineCore)
     // JavaX
     implementation(Dependencies.Data.javax)
     // Network (Retrofit, moshi, interceptor)

@@ -1,6 +1,6 @@
 package com.aqube.mvi.features.articlelist
 
-import com.aqube.mvi.data.common.Result
+import com.aqube.mvi.domain.common.Result
 import com.aqube.mvi.domain.model.Article
 
 fun Result<List<Article>>.reduce(isSearchMode: Boolean = false): ArticleListState {

@@ -1,4 +1,4 @@
-package com.aqube.mvi.data.common
+package com.aqube.mvi.domain.common
 
 sealed class Result<out T : Any> {
     data class Success<out T : Any>(val data: T) : Result<T>()

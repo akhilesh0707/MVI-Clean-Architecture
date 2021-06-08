@@ -17,10 +17,10 @@ abstract class BaseViewModel<INTENT : ViewIntent, ACTION : ViewAction, STATE : V
     private val contextProvider: CoroutineContextProvider
 ) : ViewModel(), IModel<STATE, INTENT> {
 
-    protected val mState = MutableLiveData<STATE>()
+    protected val viewState = MutableLiveData<STATE>()
     override val state: LiveData<STATE>
         get() {
-            return mState
+            return viewState
         }
 
     final override fun dispatchIntent(intent: INTENT) {

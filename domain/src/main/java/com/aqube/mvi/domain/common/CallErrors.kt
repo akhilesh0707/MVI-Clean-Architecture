@@ -1,4 +1,4 @@
-package com.aqube.mvi.data.common
+package com.aqube.mvi.domain.common
 
 sealed class CallErrors {
     object ErrorEmptyData : CallErrors()

@@ -31,10 +31,10 @@ class ArticleListAdapter @Inject constructor(
     override fun getViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding =
             ItemArticleListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return CharacterViewHolder(binding)
+        return ArticleViewHolder(binding)
     }
 
-    inner class CharacterViewHolder(private val binding: ItemArticleListBinding) :
+    inner class ArticleViewHolder(private val binding: ItemArticleListBinding) :
         RecyclerView.ViewHolder(binding.root), Binder<Article> {
         override fun bind(item: Article) {
             binding.apply {

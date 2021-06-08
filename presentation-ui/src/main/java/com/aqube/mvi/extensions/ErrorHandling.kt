@@ -2,7 +2,7 @@ package com.aqube.mvi.extensions
 
 import android.content.Context
 import com.aqube.mvi.R
-import com.aqube.mvi.data.common.CallErrors
+import com.aqube.mvi.domain.common.CallErrors
 
 fun CallErrors.getMessage(context: Context): String {
     return when (this) {

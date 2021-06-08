@@ -1,7 +1,7 @@
 package com.aqube.mvi.features.articlelist
 
 import com.aqube.mvi.common.mvi.ViewState
-import com.aqube.mvi.data.common.CallErrors
+import com.aqube.mvi.domain.common.CallErrors
 import com.aqube.mvi.domain.model.Article
 
 sealed class ArticleListState : ViewState {

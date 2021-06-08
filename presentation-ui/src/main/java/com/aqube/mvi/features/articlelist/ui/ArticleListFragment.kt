@@ -38,30 +38,17 @@ class ArticleListFragment : BaseFragment<
     }
 
     override fun initEVENT() {
-        /*searchButton.setOnClickListener {
-            articleSearchEditText.text.isNullOrBlank().not().runIfTrue {
-                dispatchIntent(ArticleListIntent.SearchArticle("search text"))
-            }
+        articleListAdapter.setItemClickListener {
+            findNavController().navigate(
+                ArticleListFragmentDirections.actionArticleListFragmentToArticleDetailFragment(0)
+            )
         }
-        articleSearchEditText.doOnTextChanged { text, _, _, _ ->
-            text.isNullOrBlank()
-                .and(mState is ArticleListState.ResultSearchArticles)
-                .runIfTrue {
-                    dispatchIntent(ArticleListIntent.ClearSearch)
-                }
-        }*/
     }
 
     private fun initRecyclerView() {
         binding.recyclerViewArticle.apply {
             adapter = articleListAdapter
             layoutManager = LinearLayoutManager(requireContext())
-        }
-
-        articleListAdapter.setItemClickListener {
-            findNavController().navigate(
-                ArticleListFragmentDirections.actionArticleListFragmentToArticleDetailFragment(0)
-            )
         }
     }
 
