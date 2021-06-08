@@ -23,21 +23,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:textColor="@color/grey"
         android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewSource"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="APRIL 2, 2020 / 1:05PM" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageViewCharacter"
+        android:id="@+id/imageViewArticle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/dummy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSource" />
@@ -50,7 +49,7 @@
         android:textAppearance="?attr/textAppearanceHeadline5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewCharacter"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewArticle"
         tools:text="Capitol Police 'was aware of the potential for violence' and other takeaways from the Senate report on January 6 security failures - CNN" />
 
     <com.google.android.material.textview.MaterialTextView

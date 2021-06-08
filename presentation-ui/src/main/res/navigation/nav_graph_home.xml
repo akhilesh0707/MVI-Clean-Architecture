@@ -20,8 +20,7 @@
         android:label="@string/fragment_article_detail_title_label"
         tools:layout="@layout/fragment_article_detail">
         <argument
-            android:name="article_id"
-            android:defaultValue="0L"
-            app:argType="long" />
+            android:name="article"
+            app:argType="com.aqube.mvi.domain.model.Article" />
     </fragment>
 </navigation>

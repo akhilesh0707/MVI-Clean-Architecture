@@ -40,7 +40,7 @@ class ArticleListFragment : BaseFragment<
     override fun initEVENT() {
         articleListAdapter.setItemClickListener {
             findNavController().navigate(
-                ArticleListFragmentDirections.actionArticleListFragmentToArticleDetailFragment(0)
+                ArticleListFragmentDirections.actionArticleListFragmentToArticleDetailFragment(it)
             )
         }
     }
