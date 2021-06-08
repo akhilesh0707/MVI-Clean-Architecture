@@ -33,7 +33,7 @@
     <style name="TextAppearance.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="fontFamily">@font/roboto</item>
         <item name="android:fontFamily">@font/roboto</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="TextAppearance.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">

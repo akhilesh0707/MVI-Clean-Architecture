@@ -53,7 +53,7 @@ class ArticleListFragment : BaseFragment<
     }
 
     override fun render(state: ArticleListState) {
-        showLoadingDialog(state is ArticleListState.Loading)
+        //showLoadingDialog(state is ArticleListState.Loading)
         when (state) {
             is ArticleListState.ResultAllArticles -> {
                 articleListAdapter.list = state.data

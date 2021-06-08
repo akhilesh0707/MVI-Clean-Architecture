@@ -28,7 +28,7 @@
         android:gravity="center|start"
         android:maxLines="3"
         android:scrollHorizontally="true"
-        android:textAppearance="?attr/textAppearanceBody1"
+        android:textAppearance="?attr/textAppearanceHeadline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageViewArticle"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,7 +37,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageViewArticle"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
@@ -47,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?attr/textAppearanceBody2"
-            android:textColor="#7E7B7B"
+            android:textColor="@color/grey"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -59,7 +60,7 @@
             android:layout_height="20dp"
             android:layout_marginEnd="24dp"
             android:src="@drawable/ic_bookmark"
-            android:tint="#7E7B7B"
+            android:tint="@color/grey"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageViewShare"
             app:layout_constraintTop_toTopOf="parent" />
@@ -68,8 +69,8 @@
             android:id="@+id/imageViewShare"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/ic_export"
-            android:tint="#7E7B7B"
+            android:src="@drawable/ic_share"
+            android:tint="@color/grey"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -77,8 +78,8 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1.5dp"
-        android:background="#CCCCCC"
+        android:layout_height="1dp"
+        android:background="@color/grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
