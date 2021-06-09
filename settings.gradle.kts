@@ -1,4 +1,5 @@
 rootProject.name = "MVI-Architecture"
-include(":presentation-ui")
-include(":data")
 include(":domain")
+include(":data")
+include(":presentation")
+include(":news-ui")

@@ -18,14 +18,16 @@ object AndroidConfig {
         const val javaLibrary = "java-library"
         const val dagger = "dagger.hilt.android.plugin"
         const val navigationSafArgs = "androidx.navigation.safeargs.kotlin"
+        const val androidLibrary = "com.android.library"
     }
 
-    object Modules{
-        const val data = ":data"
+    object Modules {
         const val domain = ":domain"
+        const val data = ":data"
+        const val presentation = ":presentation"
     }
 
-    object Debug{
+    object Debug {
         const val baseUrl = "https://newsapi.org/v2/"
     }
 }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".features.articlelist.ArticleListFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewSource"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="@color/orange_900"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="CNBC" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewDateTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewSource"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="APRIL 2, 2020 / 1:05PM" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewArticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSource" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewArticle"
+        tools:text="Capitol Police 'was aware of the potential for violence' and other takeaways from the Senate report on January 6 security failures - CNN" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        tools:text="Capitol Police 'was aware of the potential for violence' and other takeaways from the Senate report on January 6 security failures - CNN" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
