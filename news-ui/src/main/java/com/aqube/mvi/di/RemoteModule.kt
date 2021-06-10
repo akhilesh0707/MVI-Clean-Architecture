@@ -18,7 +18,7 @@ object RemoteModule {
     @Provides
     @Singleton
     fun provideNewsService(): NewsService {
-        return ServiceFactory.create(BuildConfig.DEBUG, BuildConfig.BASE_URL)
+        return ServiceFactory.create(BuildConfig.DEBUG, BuildConfig.BASE_URL, BuildConfig.API_KEY)
     }
 
     @Provides

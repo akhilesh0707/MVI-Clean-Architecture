@@ -1,8 +1,11 @@
 package com.aqube.mvi.presentation.features.articlelist
 
-import com.aqube.mvi.presentation.common.utils.CoroutineContextProvider
-import com.aqube.mvi.domain.interactor.GetTopHeadingListUseCase
+import androidx.lifecycle.viewModelScope
+import androidx.paging.cachedIn
+import androidx.paging.map
 import com.aqube.mvi.presentation.common.BaseViewModel
+import com.aqube.mvi.presentation.common.utils.CoroutineContextProvider
+import com.aqube.mvi.presentation.features.articlelist.pagination.ArticleDataSourceFactory
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
@@ -10,7 +13,7 @@ import javax.inject.Inject
 @HiltViewModel
 class ArticleListViewModel @Inject constructor(
     contextProvider: CoroutineContextProvider,
-    private val topHeadingListUseCase: GetTopHeadingListUseCase
+    private val articleDataSource: ArticleDataSourceFactory
 ) : BaseViewModel<ArticleListIntent, ArticleListAction, ArticleListState>(contextProvider) {
 
     override fun intentToAction(intent: ArticleListIntent): ArticleListAction {
@@ -25,8 +28,8 @@ class ArticleListViewModel @Inject constructor(
         launchCoroutineIO {
             when (action) {
                 is ArticleListAction.AllArticles -> {
-                    topHeadingListUseCase(Unit).collect {
-                        viewState.postValue(it.reduce())
+                    articleDataSource.getTopArticleList().cachedIn(this).collect {
+                        viewState.postValue(ArticleListState.ResultAllArticles(it))
                     }
                 }
                 is ArticleListAction.SearchArticle -> {

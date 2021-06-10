@@ -49,6 +49,9 @@ object Dependencies {
     const val lifeCycleRuntimeKtx =
         "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifeCycleRuntimeKtxVersion}"
 
+    // Paging
+    const val paging = "androidx.paging:paging-runtime:${Versions.pagingVersion}"
+
     object Data {
 
         // Network dependencies

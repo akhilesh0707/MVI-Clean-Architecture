@@ -1,9 +1,11 @@
 package com.aqube.mvi.domain.repository
 
-import com.aqube.mvi.domain.common.Result
-import com.aqube.mvi.domain.model.Article
-import kotlinx.coroutines.flow.Flow
+import com.aqube.mvi.domain.model.NewsResponse
 
 interface NewsRemoteRepository {
-    suspend fun getTopHeadings(): Flow<Result<List<Article>>>
+    suspend fun getTopHeadings(
+        pageSize: Int,
+        pageNumber: Int,
+        country: String
+    ): NewsResponse
 }

@@ -21,6 +21,7 @@ android {
 
         // Configs
         buildConfigField("String", "BASE_URL", "\"" + AndroidConfig.Debug.baseUrl + "\"")
+        buildConfigField("String", "API_KEY", "\"086340faa4d049fda83047d1eda69733\"")
     }
 
     buildTypes {
@@ -96,6 +97,9 @@ dependencies {
     implementation(Dependencies.hiltAndroid)
     kapt(Dependencies.hiltAndroidKapt)
     kapt(Dependencies.hiltKapt)
+
+    // Paging
+    implementation(Dependencies.paging)
 
     // Test
     testImplementation(Dependencies.jUnit)

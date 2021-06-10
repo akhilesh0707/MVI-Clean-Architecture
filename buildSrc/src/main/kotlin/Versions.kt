@@ -17,6 +17,9 @@ object Versions {
     const val lifeCycleRuntimeVersion = "2.2.0"
     const val lifeCycleRuntimeKtxVersion = "2.2.0"
 
+    // Paging
+    const val pagingVersion = "3.0.0"
+
     // Activity KTX for viewModels() dependencies
     const val activityKtxVersion = "1.1.0"
 

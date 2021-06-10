@@ -17,7 +17,6 @@ interface NewsService {
         @Query(KEY_QUERY_PAGE_SIZE) pageSize: Int,
         @Query(KEY_QUERY_PAGE) page: Int,
         @Query(KEY_QUERY_COUNTRY) country: String,
-        @Query(KEY_QUERY_API_KEY) apiKey: String
-    ): Response<NewsResponse>
+    ): NewsResponse
 
 }

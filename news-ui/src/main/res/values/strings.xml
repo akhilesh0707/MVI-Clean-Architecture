@@ -12,5 +12,8 @@
     <string name="error_empty_data">Empty data</string>
     <string name="error_server_error">Server error</string>
     <string name="error_exception">Error loading data</string>
+    <string name="error_something_went_wrong">Something went wrong, try again</string>
+    <string name="button_label_retry">Retry</string>
+
 
 </resources>

@@ -50,7 +50,6 @@ dependencies {
     kapt(Dependencies.hiltAndroidKapt)
     kapt(Dependencies.hiltKapt)
 
-    val pagingVersion = "3.0.0"
-    implementation("androidx.paging:paging-runtime-ktx:$pagingVersion")
-
+    // Paging
+    implementation(Dependencies.paging)
 }
