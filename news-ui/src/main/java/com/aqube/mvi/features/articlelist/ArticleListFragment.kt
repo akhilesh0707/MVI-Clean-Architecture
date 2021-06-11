@@ -2,6 +2,7 @@ package com.aqube.mvi.features.articlelist
 
 import android.view.Menu
 import android.view.MenuInflater
+import android.view.MenuItem
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -25,6 +26,7 @@ import com.aqube.mvi.presentation.features.articlelist.ArticleListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+
 
 @AndroidEntryPoint
 class ArticleListFragment : BaseFragment<
@@ -130,22 +132,26 @@ class ArticleListFragment : BaseFragment<
 
         val searchItem = menu.findItem(R.id.actionSearchArticle)
         searchView = searchItem.actionView as SearchView
-
-        /*val pendingQuery = viewModel.currentQuery.value
-        if (pendingQuery != null && pendingQuery.isNotEmpty()) {
-            searchItem.expandActionView()
-            searchView.setQuery(pendingQuery, true)
-        }*/
-
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean =
                 if (query != null) {
                     searchView.clearFocus()
                     searchForArticles(query)
                     true
-                } else false
+                } else {
+                    false
+                }
 
             override fun onQueryTextChange(newText: String?): Boolean = false
+        })
+
+        searchItem.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
+            override fun onMenuItemActionExpand(item: MenuItem?): Boolean = true
+
+            override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
+                dispatchIntent(ArticleListIntent.LoadAllArticles)
+                return true
+            }
         })
     }
 
