@@ -3,8 +3,8 @@ package com.aqube.mvi.di
 import com.aqube.mvi.BuildConfig
 import com.aqube.mvi.data.remote.api.NewsService
 import com.aqube.mvi.data.remote.api.ServiceFactory
-import com.aqube.mvi.data.remote.repository.NewsRemoteRepositoryImpl
-import com.aqube.mvi.domain.repository.NewsRemoteRepository
+import com.aqube.mvi.data.remote.repository.ArticleRemoteRepositoryImpl
+import com.aqube.mvi.domain.repository.ArticleRemoteRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,7 +23,7 @@ object RemoteModule {
 
     @Provides
     @Singleton
-    fun provideNewsRemoteRepository(newsRemoteRepository: NewsRemoteRepositoryImpl): NewsRemoteRepository {
+    fun provideArticleRemoteRepository(newsRemoteRepository: ArticleRemoteRepositoryImpl): ArticleRemoteRepository {
         return newsRemoteRepository
     }
 

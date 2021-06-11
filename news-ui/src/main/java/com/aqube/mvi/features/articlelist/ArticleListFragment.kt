@@ -1,5 +1,8 @@
 package com.aqube.mvi.features.articlelist
 
+import android.view.Menu
+import android.view.MenuInflater
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -7,12 +10,12 @@ import androidx.paging.CombinedLoadStates
 import androidx.paging.LoadState
 import androidx.paging.PagingData
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.aqube.mvi.R
 import com.aqube.mvi.common.BaseFragment
 import com.aqube.mvi.common.PagingLoadStateAdapter
 import com.aqube.mvi.databinding.FragmentArticleListBinding
 import com.aqube.mvi.domain.model.Article
 import com.aqube.mvi.extensions.getMessage
-import com.aqube.mvi.extensions.isVisible
 import com.aqube.mvi.extensions.makeGone
 import com.aqube.mvi.extensions.makeVisible
 import com.aqube.mvi.presentation.features.articlelist.ArticleListAction
@@ -34,6 +37,8 @@ class ArticleListFragment : BaseFragment<
         FragmentArticleListBinding.inflate(layoutInflater)
 
     override val viewModel: ArticleListViewModel by viewModels()
+
+    private lateinit var searchView: SearchView
 
     @Inject
     lateinit var articleListAdapter: ArticleListAdapter
@@ -119,4 +124,33 @@ class ArticleListFragment : BaseFragment<
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu_search, menu)
+
+        val searchItem = menu.findItem(R.id.actionSearchArticle)
+        searchView = searchItem.actionView as SearchView
+
+        /*val pendingQuery = viewModel.currentQuery.value
+        if (pendingQuery != null && pendingQuery.isNotEmpty()) {
+            searchItem.expandActionView()
+            searchView.setQuery(pendingQuery, true)
+        }*/
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean =
+                if (query != null) {
+                    searchView.clearFocus()
+                    searchForArticles(query)
+                    true
+                } else false
+
+            override fun onQueryTextChange(newText: String?): Boolean = false
+        })
+    }
+
+    private fun searchForArticles(queryText: String) {
+        dispatchIntent(ArticleListIntent.SearchArticle(queryText))
+        binding.recyclerViewArticle.scrollToPosition(0)
+    }
 }

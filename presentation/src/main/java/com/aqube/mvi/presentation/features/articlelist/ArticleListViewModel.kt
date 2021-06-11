@@ -1,8 +1,6 @@
 package com.aqube.mvi.presentation.features.articlelist
 
-import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import androidx.paging.map
 import com.aqube.mvi.presentation.common.BaseViewModel
 import com.aqube.mvi.presentation.common.utils.CoroutineContextProvider
 import com.aqube.mvi.presentation.features.articlelist.pagination.ArticleDataSourceFactory
@@ -33,7 +31,9 @@ class ArticleListViewModel @Inject constructor(
                     }
                 }
                 is ArticleListAction.SearchArticle -> {
-
+                    articleDataSource.searchArticles(action.searchQuery).cachedIn(this).collect {
+                        viewState.postValue(ArticleListState.ResultAllArticles(it))
+                    }
                 }
             }
         }

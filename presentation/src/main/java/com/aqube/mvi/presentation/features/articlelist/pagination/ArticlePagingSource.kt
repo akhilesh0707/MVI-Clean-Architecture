@@ -2,30 +2,32 @@ package com.aqube.mvi.presentation.features.articlelist.pagination
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.aqube.mvi.domain.interactor.GetTopHeadingListUseCase
+import com.aqube.mvi.domain.common.CallErrors
+import com.aqube.mvi.domain.common.Result
 import com.aqube.mvi.domain.model.Article
+import com.aqube.mvi.domain.model.NewsResponse
+import com.aqube.mvi.presentation.common.Constants.FIRST_PAGE
 import javax.inject.Inject
 
 class ArticlePagingSource @Inject constructor(
-    private val topHeadingListUseCase: GetTopHeadingListUseCase
+    private val func: suspend (pageNumber: Int, pageSize: Int) -> Result<NewsResponse>
 ) : PagingSource<Int, Article>() {
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Article> {
-        val position = params.key ?: 1
-        return try {
-            val response = topHeadingListUseCase(position)
-            val nextKey = if (loadMore(response.totalResults, position, params.loadSize)) {
-                position + 1
-            } else {
-                null
-            }
-
-            LoadResult.Page(
-                data = response.articles,
-                prevKey = if (position == 1) null else position - 1,
-                nextKey = nextKey
+        val position = params.key ?: FIRST_PAGE
+        return when (val apiEvent = func.invoke(position, params.loadSize)) {
+            is Result.Error -> LoadResult.Error(
+                when (apiEvent.exception) {
+                    CallErrors.ErrorEmptyData -> Throwable("Empty data")
+                    is CallErrors.ErrorException -> (apiEvent.exception as CallErrors.ErrorException).throwable
+                    CallErrors.ErrorServer -> Throwable("Server error")
+                }
             )
-        } catch (exception: Exception) {
-            LoadResult.Error(exception)
+            is Result.Success -> LoadResult.Page(
+                data = apiEvent.data.articles,
+                prevKey = if (position == FIRST_PAGE) null else position - 1,
+                nextKey = if (apiEvent.data.articles.isEmpty()) null else position + 1
+            )
+            else -> LoadResult.Error(Throwable("No Data Found."))
         }
     }
 
@@ -38,16 +40,5 @@ class ArticlePagingSource @Inject constructor(
             state.closestPageToPosition(anchorPosition)?.prevKey?.plus(1)
                 ?: state.closestPageToPosition(anchorPosition)?.nextKey?.minus(1)
         }
-    }
-
-    /**
-     * Check is last page is loaded or not
-     * @param totalRecord : Total number of news
-     * @param currentPage : Current page load
-     * @return is loading required or not
-     */
-    private fun loadMore(totalRecord: Int, currentPage: Int, pageSize: Int): Boolean {
-        val totalPage = (totalRecord / pageSize)
-        return totalPage >= currentPage
     }
 }
