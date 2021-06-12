@@ -15,7 +15,7 @@ import com.aqube.mvi.R
 import com.aqube.mvi.common.BaseFragment
 import com.aqube.mvi.common.PagingLoadStateAdapter
 import com.aqube.mvi.databinding.FragmentArticleListBinding
-import com.aqube.mvi.domain.model.Article
+import com.aqube.mvi.domain.model.articles.Article
 import com.aqube.mvi.extensions.getMessage
 import com.aqube.mvi.extensions.makeGone
 import com.aqube.mvi.extensions.makeVisible

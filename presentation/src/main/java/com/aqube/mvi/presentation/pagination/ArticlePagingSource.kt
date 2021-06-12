@@ -1,11 +1,11 @@
-package com.aqube.mvi.presentation.features.articlelist.pagination
+package com.aqube.mvi.presentation.pagination
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.aqube.mvi.domain.common.CallErrors
 import com.aqube.mvi.domain.common.Result
-import com.aqube.mvi.domain.model.Article
-import com.aqube.mvi.domain.model.NewsResponse
+import com.aqube.mvi.domain.model.articles.Article
+import com.aqube.mvi.domain.model.articles.NewsResponse
 import com.aqube.mvi.presentation.common.Constants.FIRST_PAGE
 import javax.inject.Inject
 

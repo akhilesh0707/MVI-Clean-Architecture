@@ -1,6 +1,6 @@
 package com.aqube.mvi.domain.repository
 
-import com.aqube.mvi.domain.model.NewsResponse
+import com.aqube.mvi.domain.model.articles.NewsResponse
 import com.aqube.mvi.domain.common.Result
 interface ArticleRemoteRepository {
     suspend fun getTopArticles(

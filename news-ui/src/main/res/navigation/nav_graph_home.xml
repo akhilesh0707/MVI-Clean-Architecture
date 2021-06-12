@@ -21,6 +21,6 @@
         tools:layout="@layout/fragment_article_detail">
         <argument
             android:name="article"
-            app:argType="com.aqube.mvi.domain.model.Article" />
+            app:argType="com.aqube.mvi.domain.model.articles.Article" />
     </fragment>
 </navigation>

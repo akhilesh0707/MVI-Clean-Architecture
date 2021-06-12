@@ -5,7 +5,7 @@ import androidx.navigation.fragment.navArgs
 import com.aqube.mvi.common.BaseFragment
 import com.aqube.mvi.common.utils.DateUtil
 import com.aqube.mvi.databinding.FragmentArticleDetailBinding
-import com.aqube.mvi.domain.model.Article
+import com.aqube.mvi.domain.model.articles.Article
 import com.aqube.mvi.presentation.common.ViewAction
 import com.aqube.mvi.presentation.common.ViewIntent
 import com.aqube.mvi.presentation.common.ViewState

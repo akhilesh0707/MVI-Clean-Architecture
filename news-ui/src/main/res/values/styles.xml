@@ -22,7 +22,7 @@
     <style name="TextAppearance.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
         <item name="fontFamily">@font/roboto</item>
         <item name="android:fontFamily">@font/roboto</item>
-        <item name="android:textSize">34sp</item>
+        <item name="android:textSize">30sp</item>
     </style>
 
     <style name="TextAppearance.Headline5" parent="TextAppearance.MaterialComponents.Headline5">

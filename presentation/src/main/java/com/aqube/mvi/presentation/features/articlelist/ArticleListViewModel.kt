@@ -3,7 +3,7 @@ package com.aqube.mvi.presentation.features.articlelist
 import androidx.paging.cachedIn
 import com.aqube.mvi.presentation.common.BaseViewModel
 import com.aqube.mvi.presentation.common.utils.CoroutineContextProvider
-import com.aqube.mvi.presentation.features.articlelist.pagination.ArticleDataSourceFactory
+import com.aqube.mvi.presentation.pagination.ArticleDataSourceFactory
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
 import javax.inject.Inject

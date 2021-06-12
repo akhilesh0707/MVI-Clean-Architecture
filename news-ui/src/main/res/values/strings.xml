@@ -9,6 +9,7 @@
     <string name="fragment_article_detail_title_label">Article Detail</string>
     <string name="fragment_settings_title_label">Settings</string>
     <string name="fragment_categories_title_label">Categories</string>
+    <string name="fragment_categories_heading_label">Select Your<br/> Favorite Category</string>
     <string name="error_empty_data">Empty data</string>
     <string name="error_server_error">Server error</string>
     <string name="error_exception">Error loading data</string>

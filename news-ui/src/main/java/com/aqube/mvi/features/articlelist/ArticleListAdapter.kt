@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.aqube.mvi.common.utils.DateUtil
 import com.aqube.mvi.databinding.ItemArticleListBinding
-import com.aqube.mvi.domain.model.Article
+import com.aqube.mvi.domain.model.articles.Article
 import com.bumptech.glide.RequestManager
 import javax.inject.Inject
 

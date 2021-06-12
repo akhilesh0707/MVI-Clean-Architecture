@@ -3,7 +3,7 @@ package com.aqube.mvi.data.remote.repository
 import com.aqube.mvi.data.remote.api.NewsService
 import com.aqube.mvi.domain.common.CallErrors
 import com.aqube.mvi.domain.common.Result
-import com.aqube.mvi.domain.model.NewsResponse
+import com.aqube.mvi.domain.model.articles.NewsResponse
 import com.aqube.mvi.domain.repository.ArticleRemoteRepository
 import javax.inject.Inject
 

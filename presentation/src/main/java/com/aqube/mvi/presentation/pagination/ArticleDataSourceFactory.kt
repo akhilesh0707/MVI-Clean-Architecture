@@ -1,11 +1,11 @@
-package com.aqube.mvi.presentation.features.articlelist.pagination
+package com.aqube.mvi.presentation.pagination
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.aqube.mvi.domain.interactor.GetSearchArticleUseCase
 import com.aqube.mvi.domain.interactor.GetTopArticleListUseCase
-import com.aqube.mvi.domain.model.Article
+import com.aqube.mvi.domain.model.articles.Article
 import com.aqube.mvi.presentation.common.Constants.COUNTRY
 import com.aqube.mvi.presentation.common.Constants.PAGE_SIZE
 import kotlinx.coroutines.flow.Flow

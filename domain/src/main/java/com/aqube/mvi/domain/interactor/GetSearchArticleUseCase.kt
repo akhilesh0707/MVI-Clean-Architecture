@@ -1,7 +1,7 @@
 package com.aqube.mvi.domain.interactor
 
 import com.aqube.mvi.domain.common.Result
-import com.aqube.mvi.domain.model.NewsResponse
+import com.aqube.mvi.domain.model.articles.NewsResponse
 import com.aqube.mvi.domain.repository.ArticleRemoteRepository
 import javax.inject.Inject
 

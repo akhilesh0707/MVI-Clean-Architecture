@@ -1,4 +1,4 @@
-package com.aqube.mvi.domain.model
+package com.aqube.mvi.domain.model.articles
 
 import java.io.Serializable
 

@@ -1,4 +1,4 @@
-package com.aqube.mvi.domain.model
+package com.aqube.mvi.domain.model.articles
 
 data class NewsResponse(
     val articles: List<Article>,

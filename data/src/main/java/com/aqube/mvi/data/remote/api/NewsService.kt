@@ -6,7 +6,7 @@ import com.aqube.mvi.data.remote.api.Constants.QUERY_PARAM_COUNTRY
 import com.aqube.mvi.data.remote.api.Constants.QUERY_PARAM_PAGE
 import com.aqube.mvi.data.remote.api.Constants.QUERY_PARAM_PAGE_SIZE
 import com.aqube.mvi.data.remote.api.Constants.QUERY_PARAM_SEARCH
-import com.aqube.mvi.domain.model.NewsResponse
+import com.aqube.mvi.domain.model.articles.NewsResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
