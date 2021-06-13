@@ -58,7 +58,7 @@ class ArticleListFragment : BaseFragment<
         val intent = try {
             arguments.let {
                 (requireActivity() as AppCompatActivity).supportActionBar?.title = it.category
-                ArticleListIntent.LoadSelectedCategory
+                ArticleListIntent.LoadSelectedCategory(it.category)
             }
         } catch (e: Exception) {
             ArticleListIntent.LoadAllArticles

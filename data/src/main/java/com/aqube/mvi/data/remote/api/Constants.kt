@@ -7,4 +7,5 @@ object Constants {
     const val QUERY_PARAM_PAGE = "page"
     const val QUERY_PARAM_COUNTRY = "country"
     const val QUERY_PARAM_SEARCH = "q"
+    const val QUERY_PARAM_CATEGORY = "category"
 }

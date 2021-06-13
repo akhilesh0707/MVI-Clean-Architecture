@@ -21,8 +21,20 @@
         tools:layout="@layout/fragment_article_list">
         <argument
             android:name="category"
-            app:nullable="true"
             app:argType="string" />
+        <action
+            android:id="@+id/action_articleListFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="com.aqube.mvi.features.articledetail.ArticleDetailFragment"
+        android:label="@string/fragment_article_detail_title_label"
+        tools:layout="@layout/fragment_article_detail">
+        <argument
+            android:name="article"
+            app:argType="com.aqube.mvi.domain.model.articles.Article" />
     </fragment>
 
 </navigation>

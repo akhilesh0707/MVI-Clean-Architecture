@@ -19,7 +19,7 @@ class ArticleListViewModel @Inject constructor(
             is ArticleListIntent.LoadAllArticles -> ArticleListAction.AllArticles
             is ArticleListIntent.ClearSearch -> ArticleListAction.AllArticles
             is ArticleListIntent.SearchArticle -> ArticleListAction.SearchArticle(intent.name)
-            is ArticleListIntent.LoadSelectedCategory -> ArticleListAction.SelectedCategoryArticles
+            is ArticleListIntent.LoadSelectedCategory -> ArticleListAction.SelectedCategoryArticles(intent.category)
         }
     }
 
@@ -36,8 +36,10 @@ class ArticleListViewModel @Inject constructor(
                         viewState.postValue(ArticleListState.ResultAllArticles(it))
                     }
                 }
-                ArticleListAction.SelectedCategoryArticles -> {
-
+                is ArticleListAction.SelectedCategoryArticles -> {
+                    articleDataSource.getCategoryArticles(action.category).cachedIn(this).collect {
+                        viewState.postValue(ArticleListState.ResultAllArticles(it))
+                    }
                 }
             }
         }
