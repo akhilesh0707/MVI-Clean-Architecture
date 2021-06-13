@@ -5,21 +5,23 @@ import com.aqube.mvi.domain.model.articles.NewsResponse
 import com.aqube.mvi.domain.repository.ArticleRemoteRepository
 import javax.inject.Inject
 
-typealias GetSearchArticleBaseUseCase = BaseUseCase<GetSearchArticleUseCase.Params, Result<NewsResponse>>
+typealias GetCategoryArticlesBaseUseCase = BaseUseCase<GetCategoryArticlesUseCase.Params, Result<NewsResponse>>
 
-class GetSearchArticleUseCase @Inject constructor(
+class GetCategoryArticlesUseCase @Inject constructor(
     private val articleRemoteRepository: ArticleRemoteRepository
-) : GetSearchArticleBaseUseCase {
+) : GetCategoryArticlesBaseUseCase {
     override suspend operator fun invoke(params: Params) =
-        articleRemoteRepository.searchArticle(
+        articleRemoteRepository.categoryArticle(
             pageSize = params.pageSize,
             pageNumber = params.pageNumber,
-            searchQuery = params.searchQuery
+            country = params.country,
+            category = params.category
         )
 
     data class Params(
         val pageSize: Int,
         val pageNumber: Int,
-        val searchQuery: String
+        val country: String,
+        val category: String
     )
 }

@@ -17,5 +17,5 @@ class GetTopArticleListUseCase @Inject constructor(
             country = params.country
         )
 
-    data class Params(var pageSize: Int, var pageNumber: Int, var country: String)
+    data class Params(val pageSize: Int, val pageNumber: Int, val country: String)
 }
