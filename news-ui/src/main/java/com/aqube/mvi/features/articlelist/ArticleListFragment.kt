@@ -46,6 +46,8 @@ class ArticleListFragment : BaseFragment<
 
     private lateinit var searchView: SearchView
 
+    private lateinit var currentIntent: ArticleListIntent
+
     @Inject
     lateinit var articleListAdapter: ArticleListAdapter
 
@@ -55,7 +57,7 @@ class ArticleListFragment : BaseFragment<
     }
 
     override fun initDATA() {
-        val intent = try {
+        currentIntent = try {
             arguments.let {
                 (requireActivity() as AppCompatActivity).supportActionBar?.title = it.category
                 ArticleListIntent.LoadSelectedCategory(it.category)
@@ -63,7 +65,7 @@ class ArticleListFragment : BaseFragment<
         } catch (e: Exception) {
             ArticleListIntent.LoadAllArticles
         }
-        dispatchIntent(intent)
+        dispatchIntent(currentIntent)
     }
 
     override fun initEVENT() {
@@ -161,7 +163,7 @@ class ArticleListFragment : BaseFragment<
             override fun onMenuItemActionExpand(item: MenuItem?): Boolean = true
 
             override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
-                dispatchIntent(ArticleListIntent.LoadAllArticles)
+                dispatchIntent(currentIntent)
                 return true
             }
         })
