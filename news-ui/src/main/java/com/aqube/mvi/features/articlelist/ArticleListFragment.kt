@@ -74,6 +74,15 @@ class ArticleListFragment : BaseFragment<
                 ArticleListFragmentDirections.actionArticleListFragmentToArticleDetailFragment(it)
             )
         }
+
+        binding.buttonRetry.setOnClickListener {
+            articleListAdapter.retry()
+        }
+
+        // show the loading state for te first load
+        articleListAdapter.addLoadStateListener { loadState ->
+            handleLoadState(loadState)
+        }
     }
 
     override fun render(state: ArticleListState) {
@@ -105,15 +114,6 @@ class ArticleListFragment : BaseFragment<
             )
             layoutManager = LinearLayoutManager(requireContext())
             setHasFixedSize(true)
-        }
-
-        buttonRetry.setOnClickListener {
-            articleListAdapter.retry()
-        }
-
-        // show the loading state for te first load
-        articleListAdapter.addLoadStateListener { loadState ->
-            handleLoadState(loadState)
         }
     }
 

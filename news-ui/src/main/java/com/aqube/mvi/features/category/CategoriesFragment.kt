@@ -25,7 +25,6 @@ class CategoriesFragment : BaseFragment<
     override fun getViewBinding(): FragmentCategoriesBinding =
         FragmentCategoriesBinding.inflate(layoutInflater)
 
-
     override val viewModel: CategoriesViewModel by viewModels()
 
     @Inject
@@ -42,7 +41,9 @@ class CategoriesFragment : BaseFragment<
     override fun initEVENT() {
         categoriesAdapter.setItemClickListener { character ->
             findNavController().navigate(
-                CategoriesFragmentDirections.actionCategoriesFragmentToArticleListFragment(character.categoryName)
+                CategoriesFragmentDirections.actionCategoriesFragmentToArticleListFragment(
+                    character.categoryName
+                )
             )
         }
     }

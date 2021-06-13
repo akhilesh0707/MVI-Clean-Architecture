@@ -16,7 +16,7 @@ class CategoriesAdapter @Inject constructor(
     private val glide: RequestManager
 ) : BaseAdapter<Category>() {
 
-    private val diffCallback = object : DiffUtil.ItemCallback<Category>() {
+    private val DIFF_CALL_BACK = object : DiffUtil.ItemCallback<Category>() {
         override fun areItemsTheSame(oldItem: Category, newItem: Category): Boolean {
             return oldItem.id == newItem.id
         }
@@ -26,12 +26,14 @@ class CategoriesAdapter @Inject constructor(
         }
     }
 
-    override val differ = AsyncListDiffer(this, diffCallback)
+    override val differ = AsyncListDiffer(this, DIFF_CALL_BACK)
 
     override fun getViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding =
-            ItemCategoriesBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return CharacterViewHolder(binding)
+        return CharacterViewHolder(
+            ItemCategoriesBinding.inflate(
+                LayoutInflater.from(parent.context), parent, false
+            )
+        )
     }
 
     inner class CharacterViewHolder(private val binding: ItemCategoriesBinding) :

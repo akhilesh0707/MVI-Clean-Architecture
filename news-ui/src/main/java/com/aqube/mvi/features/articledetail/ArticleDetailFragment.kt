@@ -23,6 +23,7 @@ class ArticleDetailFragment : BaseFragment<
 
     @Inject
     lateinit var glide: RequestManager
+
     private val arguments: ArticleDetailFragmentArgs by navArgs()
 
     override fun getViewBinding(): FragmentArticleDetailBinding =
@@ -43,14 +44,13 @@ class ArticleDetailFragment : BaseFragment<
     override fun render(state: ViewState) {
     }
 
-    private fun initView(article: Article) {
-        binding.apply {
-            textViewSource.text = article.source.name.uppercase()
-            textViewDateTime.text = DateUtil.getDisplayDate(article.publishedAt).uppercase()
-            textViewTitle.text = article.title
-            textViewDescription.text = article.content
-            // Load image
-            glide.load(article.urlToImage).into(imageViewArticle)
-        }
+    private fun initView(article: Article) = binding.apply {
+        textViewSource.text = article.source.name.uppercase()
+        textViewDateTime.text = DateUtil.getDisplayDate(article.publishedAt).uppercase()
+        textViewTitle.text = article.title
+        textViewDescription.text = article.content
+        // Load image
+        glide.load(article.urlToImage).into(imageViewArticle)
     }
+
 }
