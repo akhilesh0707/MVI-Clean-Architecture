@@ -41,7 +41,11 @@ class CategoriesAdapter @Inject constructor(
                 textViewCategory.text = item.categoryName
                 glide.load(imageViewCategory.context.getResource(item.categoryImgUrl))
                     .into(imageViewCategory)
-                //glide.load(item.image).into(imageViewCharacter)
+                root.setOnClickListener {
+                    onItemClickListener?.let { itemClick ->
+                        itemClick(item)
+                    }
+                }
             }
         }
     }

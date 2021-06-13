@@ -24,8 +24,8 @@ object Versions {
     const val activityKtxVersion = "1.1.0"
 
     // Navigation component dependencies
-    const val navFragmentKtxVersion = "2.3.0"
-    const val navUiKtxVersion = "2.3.0"
+    const val navFragmentKtxVersion = "2.3.5"
+    const val navUiKtxVersion = "2.3.5"
 
     // Network dependencies
     const val retrofitVersion = "2.7.0"

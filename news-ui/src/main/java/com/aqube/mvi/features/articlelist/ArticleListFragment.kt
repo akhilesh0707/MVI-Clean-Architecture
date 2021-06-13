@@ -3,10 +3,12 @@ package com.aqube.mvi.features.articlelist
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.paging.CombinedLoadStates
 import androidx.paging.LoadState
 import androidx.paging.PagingData
@@ -40,6 +42,8 @@ class ArticleListFragment : BaseFragment<
 
     override val viewModel: ArticleListViewModel by viewModels()
 
+    private val arguments: ArticleListFragmentArgs by navArgs()
+
     private lateinit var searchView: SearchView
 
     @Inject
@@ -51,7 +55,15 @@ class ArticleListFragment : BaseFragment<
     }
 
     override fun initDATA() {
-        dispatchIntent(ArticleListIntent.LoadAllArticles)
+        val intent = try {
+            arguments.let {
+                (requireActivity() as AppCompatActivity).supportActionBar?.title = it.category
+                ArticleListIntent.LoadSelectedCategory
+            }
+        } catch (e: Exception) {
+            ArticleListIntent.LoadAllArticles
+        }
+        dispatchIntent(intent)
     }
 
     override fun initEVENT() {

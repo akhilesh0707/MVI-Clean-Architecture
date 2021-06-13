@@ -5,4 +5,5 @@ import com.aqube.mvi.presentation.common.ViewAction
 sealed class ArticleListAction : ViewAction {
     data class SearchArticle(val searchQuery: String) : ArticleListAction()
     object AllArticles : ArticleListAction()
+    object SelectedCategoryArticles : ArticleListAction()
 }

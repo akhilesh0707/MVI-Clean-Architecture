@@ -1,6 +1,7 @@
 package com.aqube.mvi.features.category
 
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.aqube.mvi.common.BaseFragment
 import com.aqube.mvi.databinding.FragmentCategoriesBinding
@@ -40,9 +41,9 @@ class CategoriesFragment : BaseFragment<
 
     override fun initEVENT() {
         categoriesAdapter.setItemClickListener { character ->
-            /*findNavController().navigate(
-                ArticleListFragmentDirections.actionArticleListFragmentToArticleDetailFragment(it)
-            )*/
+            findNavController().navigate(
+                CategoriesFragmentDirections.actionCategoriesFragmentToArticleListFragment(character.categoryName)
+            )
         }
     }
 
@@ -51,8 +52,6 @@ class CategoriesFragment : BaseFragment<
             adapter = categoriesAdapter
             layoutManager = GridLayoutManager(requireContext(), 2)
         }
-
-
     }
 
     override fun render(state: CategoryState) {

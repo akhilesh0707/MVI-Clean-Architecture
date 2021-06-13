@@ -19,6 +19,7 @@ class ArticleListViewModel @Inject constructor(
             is ArticleListIntent.LoadAllArticles -> ArticleListAction.AllArticles
             is ArticleListIntent.ClearSearch -> ArticleListAction.AllArticles
             is ArticleListIntent.SearchArticle -> ArticleListAction.SearchArticle(intent.name)
+            is ArticleListIntent.LoadSelectedCategory -> ArticleListAction.SelectedCategoryArticles
         }
     }
 
@@ -34,6 +35,9 @@ class ArticleListViewModel @Inject constructor(
                     articleDataSource.searchArticles(action.searchQuery).cachedIn(this).collect {
                         viewState.postValue(ArticleListState.ResultAllArticles(it))
                     }
+                }
+                ArticleListAction.SelectedCategoryArticles -> {
+
                 }
             }
         }
