@@ -32,7 +32,14 @@ class ArticleRemoteRepositoryImpl @Inject constructor(private val newsService: N
         country: String,
         category: String
     ): Result<NewsResponse> {
-        return getResult(newsService.getCategoryArticles(pageSize, pageNumber, country, category))
+        return getResult(
+            newsService.getCategoryArticles(
+                pageSize,
+                pageNumber,
+                country,
+                category.lowercase()
+            )
+        )
     }
 
     private fun getResult(result: Response<NewsResponse>): Result<NewsResponse> {
