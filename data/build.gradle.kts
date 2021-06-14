@@ -1,6 +1,7 @@
 plugins {
     id(AndroidConfig.Plugins.kotlin)
     id(AndroidConfig.Plugins.javaLibrary)
+    id(AndroidConfig.Plugins.kotlinKapt)
 }
 
 java {
@@ -22,6 +23,10 @@ dependencies {
     implementation(Dependencies.Data.moshiConverter)
     implementation(Dependencies.Data.loggingInterceptor)
 
+    // Room
+    api(Dependencies.Data.roomKtx)
+    api(Dependencies.Data.roomRuntime)
+    kapt(Dependencies.Data.roomCompilerKapt)
     // Timber logging
     implementation(Dependencies.Data.timber)
 }

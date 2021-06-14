@@ -53,7 +53,6 @@ object Dependencies {
     const val paging = "androidx.paging:paging-runtime:${Versions.pagingVersion}"
 
     object Data {
-
         // Network dependencies
         const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
         const val moshiConverter =
@@ -64,5 +63,9 @@ object Dependencies {
         // Timber
         const val timber = Dependencies.timber
         const val javax = Dependencies.javax
+
+        const val roomRuntime = "androidx.room:room-runtime:${Versions.roomVersion}"
+        const val roomCompilerKapt = "androidx.room:room-compiler:${Versions.roomVersion}"
+        const val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}"
     }
 }

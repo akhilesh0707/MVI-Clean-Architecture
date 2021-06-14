@@ -20,6 +20,9 @@ object Versions {
     // Paging
     const val pagingVersion = "3.0.0"
 
+    // Room
+    const val roomVersion = "2.2.5"
+
     // Activity KTX for viewModels() dependencies
     const val activityKtxVersion = "1.1.0"
 
