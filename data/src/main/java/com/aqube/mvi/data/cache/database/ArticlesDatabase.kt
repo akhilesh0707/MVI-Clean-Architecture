@@ -14,21 +14,5 @@ import javax.xml.transform.Source
     exportSchema = false
 )
 abstract class ArticlesDatabase @Inject constructor() : RoomDatabase() {
-
     abstract fun cachedArticlesDao(): ArticlesDao
-
-    /* companion object {
-         @Volatile
-         private var INSTANCE: ArticlesDatabase? = null
-
-         fun getInstance(context: Context): ArticlesDatabase = INSTANCE ?: synchronized(this) {
-             INSTANCE ?: buildDatabase(context).also { INSTANCE = it }
-         }
-
-         private fun buildDatabase(context: Context) = Room.databaseBuilder(
-             context.applicationContext,
-             ArticlesDatabase::class.java,
-             CacheConstants.DB_NAME
-         ).build()
-     }*/
 }
