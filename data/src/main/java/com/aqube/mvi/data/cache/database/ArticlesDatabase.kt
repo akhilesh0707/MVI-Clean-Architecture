@@ -5,11 +5,11 @@ import androidx.room.RoomDatabase
 import com.aqube.mvi.data.cache.Migrations
 import com.aqube.mvi.data.cache.dao.ArticlesDao
 import com.aqube.mvi.data.cache.models.ArticleEntity
+import com.aqube.mvi.data.cache.models.SourceEntity
 import javax.inject.Inject
-import javax.xml.transform.Source
 
 @Database(
-    entities = [ArticleEntity::class, Source::class],
+    entities = [ArticleEntity::class, SourceEntity::class],
     version = Migrations.DB_VERSION,
     exportSchema = false
 )

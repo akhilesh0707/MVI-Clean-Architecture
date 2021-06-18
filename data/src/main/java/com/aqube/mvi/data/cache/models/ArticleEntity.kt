@@ -9,15 +9,17 @@ import java.io.Serializable
 
 @Entity(tableName = CacheConstants.ARTICLES_TABLE_NAME)
 data class ArticleEntity(
+    @PrimaryKey
+    val title: String,
+    @Embedded
+    val sourceEntity: SourceEntity,
     val author: String,
     val content: String,
     val description: String,
+    @ColumnInfo(name = "published_at")
     val publishedAt: String,
-    @Embedded
-    val sourceEntity: SourceEntity,
-    @PrimaryKey
-    val title: String,
     val url: String,
+    @ColumnInfo(name = "url_to_image")
     val urlToImage: String,
     @ColumnInfo(name = "is_bookmarked")
     var isBookMarked: Boolean
