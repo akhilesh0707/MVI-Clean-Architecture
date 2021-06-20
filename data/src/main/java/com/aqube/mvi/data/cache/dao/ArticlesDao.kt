@@ -15,8 +15,8 @@ interface ArticlesDao {
     @Query("DELETE FROM articles")
     fun clearArticles(): Int
 
-    @Query("UPDATE articles SET is_bookmarked = 1 WHERE title = :articleTitle")
-    fun bookmarkCharacter(articleTitle: String): Int
+    @Query("DELETE FROM articles WHERE title = :articleTitle")
+    fun deleteArticle(articleTitle: String): Int
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun addCharacter(vararg character: ArticleEntity)
