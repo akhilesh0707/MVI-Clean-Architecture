@@ -12,7 +12,7 @@ data class ArticleEntity(
     @PrimaryKey
     val title: String,
     @Embedded
-    val sourceEntity: SourceEntity,
+    val source: SourceEntity,
     val author: String,
     val content: String,
     val description: String,
