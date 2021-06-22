@@ -3,8 +3,8 @@ package com.aqube.mvi.di
 import com.aqube.mvi.BuildConfig
 import com.aqube.mvi.data.remote.api.NewsService
 import com.aqube.mvi.data.remote.api.ServiceFactory
-import com.aqube.mvi.data.remote.repository.ArticleRemoteRepositoryImpl
-import com.aqube.mvi.data.remote.repository.CategoryRepositoryImpl
+import com.aqube.mvi.data.repository.ArticleRemoteRepositoryImpl
+import com.aqube.mvi.data.repository.CategoryRepositoryImpl
 import com.aqube.mvi.domain.repository.ArticleRemoteRepository
 import com.aqube.mvi.domain.repository.CategoryRepository
 import dagger.Module

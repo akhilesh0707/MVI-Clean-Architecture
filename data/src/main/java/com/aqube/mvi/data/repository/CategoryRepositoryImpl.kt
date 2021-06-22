@@ -1,4 +1,4 @@
-package com.aqube.mvi.data.remote.repository
+package com.aqube.mvi.data.repository
 
 import com.aqube.mvi.domain.common.CallErrors
 import com.aqube.mvi.domain.common.Result

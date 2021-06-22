@@ -1,5 +1,6 @@
-package com.aqube.mvi.data.remote.repository
+package com.aqube.mvi.data.repository
 
+import com.aqube.mvi.data.cache.dao.ArticlesDao
 import com.aqube.mvi.data.remote.api.NewsService
 import com.aqube.mvi.domain.common.CallErrors
 import com.aqube.mvi.domain.common.Result
@@ -8,8 +9,10 @@ import com.aqube.mvi.domain.repository.ArticleRemoteRepository
 import retrofit2.Response
 import javax.inject.Inject
 
-class ArticleRemoteRepositoryImpl @Inject constructor(private val newsService: NewsService) :
-    ArticleRemoteRepository {
+class ArticleRemoteRepositoryImpl @Inject constructor(
+    private val newsService: NewsService,
+    private val articlesDao: ArticlesDao
+) : ArticleRemoteRepository {
     override suspend fun getTopArticles(
         pageSize: Int,
         pageNumber: Int,
