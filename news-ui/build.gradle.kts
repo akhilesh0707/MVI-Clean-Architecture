@@ -21,7 +21,7 @@ android {
 
         // Configs
         buildConfigField("String", "BASE_URL", "\"" + AndroidConfig.Debug.baseUrl + "\"")
-        buildConfigField("String", "API_KEY", "\"086340faa4d049fda83047d1eda69733\"")
+        buildConfigField("String", "API_KEY", "\"" + AndroidConfig.Debug.apiKey + "\"")
     }
 
     buildTypes {

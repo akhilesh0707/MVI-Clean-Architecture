@@ -29,5 +29,6 @@ object AndroidConfig {
 
     object Debug {
         const val baseUrl = "https://newsapi.org/v2/"
+        const val apiKey = "086340faa4d049fda83047d1eda69733"
     }
 }
