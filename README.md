@@ -1,2 +1,2 @@
 # MVI-Architecture
-MVI-Architecture playground
+MVI-Architecture playground.
